@@ -68,30 +68,30 @@
   display: inline-flex;
   align-items: center;
   gap: 8px; /* Espacio entre el punto verde y el texto */
-  background-color: rgba(34, 197, 94, 0.1); /* Fondo verde muy sutil y transparente */
+  background-color: rgba(34, 197, 94, 0.1); /* Fondo verde sutil y transparente */
   border: 1px solid rgba(34, 197, 94, 0.3); /* Borde verde suave */
   padding: 6px 12px;
-  border-radius: 20px; /* Bordes completamente redondeados (estilo píldora) */
-  margin-bottom: 20px; /* Separación con el resto del contenido */
+  border-radius: 20px; 
+  margin-bottom: 20px; 
 }
 
-/* El círculo verde con efecto de pulso */
+
 .status-dot {
   width: 8px;
   height: 8px;
   background-color: #22c55e; /* Verde brillante */
-  border-radius: 50%; /* Lo hace completamente redondo */
+  border-radius: 50%; 
   display: inline-block;
-  box-shadow: 0 0 8px #22c55e; /* Le da un pequeño brillo de neón */
+  box-shadow: 0 0 8px #22c55e; 
 }
 
-/* El texto de dentro */
 .status-text {
-  color: #22c55e; /* Texto verde a juego */
-  font-size: 0.85rem; /* Tamaño pequeño y elegante */
-  font-weight: 600; /* Texto un poco en negrita */
+  color: #22c55e; 
+  font-size: 0.85rem; 
+  font-weight: 600; 
   letter-spacing: 0.5px;
 }
+
 /* Secciones estándar */
 .content-section {
   padding: 80px 0;
@@ -110,7 +110,6 @@
     max-width: 600px;
   }
 
-/* --- COMPONENTES REUTILIZABLES (BOTÓN) --- */
 .btn-primary {
   background-color: #3b82f6;
   color: #ffffff;
@@ -126,7 +125,6 @@
     background-color: #2563eb; /* Azul más oscuro al pasar el ratón */
   }
 
-/* --- PIE DE PÁGINA --- */
 .main-footer {
   text-align: center;
   padding: 40px;
