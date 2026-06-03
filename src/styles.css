@@ -20,17 +20,30 @@ html, body {
 }
 
 .btn-primary {
-  background-color: #3b82f6;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
+  background-color: rgba(59, 130, 246, 0.15); 
+  color: #f6f2f2e6; 
+  padding: 12px 28px; 
+  border-radius: 50px;
+
+  /* Efecto cristal (Glassmorphism) */
+  backdrop-filter: blur(4px); /* Fondo detrás del botón se vea desenfocado */
+  border: 1px solid rgba(59, 130, 246, 0.25); /* Un borde muy fino y transparente */
+
+  /* Reset y tipografía */
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600; /* Un grosor elegante, no tan gordo como bold */
+  font-size: 0.95rem;
+  letter-spacing: 0.5px; /* Separa un pelín las letras */
   display: inline-block;
-  border: none;
   cursor: pointer;
+  /* Animación suave para cuando pases el ratón */
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
   .btn-primary:hover {
     background-color: #2563eb;
   }
+
+p{
+    margin-bottom: 18px;
+}

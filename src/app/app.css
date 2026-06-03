@@ -38,7 +38,6 @@
     color: #3b82f6; /* Se vuelve azul al pasar el ratón */
   }
 
-/* --- ESTRUCTURA DEL CONTENIDO --- */
 .main-content {
   max-width: 1000px;
   margin: 0 auto;
@@ -47,8 +46,19 @@
 
 /* Sección de Bienvenida */
 .hero-section {
-  text-align: center;
-  padding: 120px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* más espacio entre texto y foto */
+  padding: 5rem 0;
+  width: 100%;
+}
+
+.hero-content{
+    /* Texto ocupa el doble que la imagen (2:1) */
+    flex: 2;
+    max-width: 700px;
+    text-align: left;
 }
 
 .hero-title {
@@ -58,10 +68,16 @@
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #94a3b8;
   margin-bottom: 30px;
 }
+
+.hero-text{
+      font-size: 1.2rem;
+      max-width: none;
+      opacity: 0.8;
+  }
 
 /*Estado disponible u ocupado para trabajar*/
 .status-section {
@@ -92,6 +108,39 @@
   letter-spacing: 0.5px;
 }
 
+.profile-img-container {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+  width: 100%; 
+  height: auto; 
+  max-height: 600px;
+  border-radius: 12px; 
+  border: 2px solid #334155; /* Un borde sutil para que encaje con el modo oscuro */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+  object-fit: cover;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 0.5rem;          
+  justify-content: flex-start; 
+  align-items: center;
+  margin-top: 1rem; 
+  margin-left: 0;        /* asegura que no haya desplazamiento lateral */
+}
+
+.hero-buttons .btn-primary {
+  padding: 8px 14px;     /* reduce el padding para que ocupen menos espacio */
+  font-size: 0.95rem;
+  margin: 0;             /* elimina márgenes externos posibles */
+}
+
 /* Secciones estándar */
 .content-section {
   padding: 80px 0;
@@ -110,21 +159,6 @@
     max-width: 600px;
   }
 
-.btn-primary {
-  background-color: #3b82f6;
-  color: #ffffff;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transition: background-color 0.2s ease;
-}
-
-  .btn-primary:hover {
-    background-color: #2563eb; /* Azul más oscuro al pasar el ratón */
-  }
-
 .main-footer {
   text-align: center;
   padding: 40px;
@@ -132,4 +166,30 @@
   font-size: 0.9rem;
   background-color: #0b0f19;
   margin-top: 40px;
+}
+
+/* Responsive: en pantallas pequeñas apilar */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    order: 2;
+    flex: none;
+    max-width: 100%;
+  }
+
+  .profile-img-container {
+    order: 1;
+    max-width: 70%;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
 }
