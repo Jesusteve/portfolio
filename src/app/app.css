@@ -126,6 +126,21 @@
   object-fit: cover;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 0.25rem;          
+  justify-content: flex-start; 
+  align-items: center;
+  margin-top: 1rem; 
+  margin-left: 0;        /* asegura que no haya desplazamiento lateral */
+}
+
+.hero-buttons .btn-primary {
+  padding: 8px 14px;     /* reduce el padding para que ocupen menos espacio */
+  font-size: 0.95rem;
+  margin: 0;             /* elimina márgenes externos posibles */
+}
+
 /* Secciones estándar */
 .content-section {
   padding: 80px 0;
