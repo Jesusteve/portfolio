@@ -29,8 +29,13 @@ html, body {
   display: inline-block;
   border: none;
   cursor: pointer;
+  margin: 2rem auto;
 }
 
   .btn-primary:hover {
     background-color: #2563eb;
   }
+
+p{
+    margin-bottom: 18px;
+}
