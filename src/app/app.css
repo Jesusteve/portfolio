@@ -161,6 +161,42 @@
 
   }
 
+.content-columnas {
+  display: flex;
+  justify-content: center; 
+  gap: 3rem; 
+  width: 100%;
+  align-items: center;
+}
+  .content-left{
+        flex: 1;
+        max-width: 500px;
+        text-align: left;
+    }
+
+
+  .content-right{
+        flex:1;
+        max-block-size: 500px;
+        text-align: left;
+    }
+.skills-tag {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #e2e8f0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 14px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  margin: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .main-footer {
   text-align: center;
   padding: 40px;
