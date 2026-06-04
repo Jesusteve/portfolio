@@ -180,8 +180,10 @@
         max-block-size: 500px;
         text-align: left;
     }
-.skills-tag {
+
+.category-tag {
   display: inline-flex;
+  flex-direction: column;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -195,6 +197,32 @@
   backdrop-filter: blur(6px);
   margin: 5px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+  .category-tag:hover {
+    transform: translate(-6px);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap; /*  Si las pegatinas no caben en una línea, saltan solas abajo */
+  gap: 0.75rem; /* El hueco exacto entre pegatina y pegatina */
+}
+
+
+.skills-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: default;
 }
 
 .main-footer {
