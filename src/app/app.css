@@ -163,27 +163,27 @@
 
 .content-columnas {
   display: flex;
-  justify-content: center; 
-  gap: 3rem; 
+  justify-content: center;
+  gap: 0 3rem;
   width: 100%;
   align-items: center;
+  flex-wrap: wrap;
 }
-  .content-left{
-        flex: 1;
-        max-width: 500px;
-        text-align: left;
-    }
-
-
-  .content-right{
-        flex:1;
-        max-block-size: 500px;
-        text-align: left;
-    }
+.content-left, .content-right {
+  flex: 1;
+  min-width: 400px;
+  max-width:100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  
+}
+        
 
 .category-tag {
   display: inline-flex;
   flex-direction: column;
+ 
   width: 100%;
   align-items: center;
   justify-content: center;
