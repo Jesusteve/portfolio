@@ -47,3 +47,11 @@ html, body {
 p{
     margin-bottom: 18px;
 }
+
+.divisoria {
+  border: none;
+  height: 1.5px;
+  width: 80%; /* No ocupa todo el ancho para que sea más elegante */
+  background: linear-gradient( to right, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.15) 100% );
+  margin: 0.4rem 0;
+}
