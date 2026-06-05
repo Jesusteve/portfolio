@@ -225,6 +225,41 @@
   cursor: default;
 }
 
+
+.exp-item {
+  display: flex;
+  gap: 2rem;
+}
+
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #10b981; 
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10b981; /* Efecto de brillo */
+  margin-top: 6px; /* Lo baja un pelín para alinearlo con el primer título */
+  z-index: 2;
+}
+
+/* La línea vertical */
+.timeline-line {
+  width: 2px;
+  flex: 1; /* Se estira automáticamente hasta el final de la caja de texto */
+  background: linear-gradient(to bottom, #10b981, rgba(255, 255, 255, 0.05));
+  margin-top: 6px;
+}
+
+.exp-content{
+
+}
+
 .main-footer {
   text-align: center;
   padding: 40px;
