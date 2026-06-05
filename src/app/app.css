@@ -222,13 +222,13 @@
   border-radius: 50px;
   font-size: 0.9rem;
   font-weight: 500;
-  cursor: default;
 }
 
 
 .exp-item {
   display: flex;
   gap: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 
@@ -241,9 +241,7 @@
 .timeline-dot {
   width: 12px;
   height: 12px;
-  background-color: #10b981; 
   border-radius: 50%;
-  box-shadow: 0 0 10px #10b981; /* Efecto de brillo */
   margin-top: 6px; /* Lo baja un pelín para alinearlo con el primer título */
   z-index: 2;
 }
