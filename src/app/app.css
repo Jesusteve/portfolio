@@ -205,24 +205,29 @@
     transform: translate(-6px);
     border-color: rgba(255, 255, 255, 0.4);
   }
-
-.tags-container {
-  display: flex;
-  flex-wrap: wrap; /*  Si las pegatinas no caben en una línea, saltan solas abajo */
-  gap: 0.75rem; /* El hueco exacto entre pegatina y pegatina */
+/* Forzar salto de línea tras el título y espacio */
+.category-tag h3 {
+  display: block;
+  margin: 0 0 0.5rem 0;
+  width: 100%;
 }
 
+/* Contenedor de tags en nueva línea; permite wrap y separación */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+}
 
+/* Pequeño estilo opcional para las etiquetas */
 .skills-tag {
-  display: inline-flex;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.06);
   color: #f1f5f9;
-  padding: 8px 18px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  border-radius: 8px;
+  font-size: 0.95rem;
 }
 
 
@@ -257,7 +262,7 @@
 
 .project {
   display: flex;
-  align-items: center; /* Centra verticalmente el texto y el enlace */
+  align-items: flex-start; /* antes: center -> ahora el enlace queda al mismo nivel que el título */
   justify-content: space-between;
   gap: 2rem;
   background-color: rgba(59, 130, 246, 0.1);
@@ -268,30 +273,17 @@
   transition: all 0.3s ease;
 }
 
-  .project:hover {
-    
-    border-color: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
-  }
-
-
 .project-info {
+  display: flex;           /* necesario para que el contenido sea un column flex */
+  flex-direction: column;
   flex: 1;
   text-align: left;
-  flex-direction: column;
 }
-
-  .project-info h3 {
-    color: #ffffff;
-    margin: 0;
-    margin-bottom: 0.4rem;
-    font-size: 1.15rem;
-    
-  }
-
 
 .project-repo {
   display: inline-block;
+  align-self: flex-start;  /* coloca el enlace en la parte superior del .project (alineado con el h3) */
+  margin-top: 0.12rem;     /* pequeño ajuste para empatar con la línea base del título; modifica si quieres */
   white-space: nowrap;
   color: #34d09c; 
   text-decoration: underline;
