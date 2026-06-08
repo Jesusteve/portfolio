@@ -260,7 +260,6 @@
   margin-top: 6px;
 }
 
-
 .project {
   display: flex;
   flex-direction: column;
@@ -287,6 +286,7 @@
     font-weight: 600;
   }
 
+/* 4. EL ENLACE */
 .project-repo {
   color: #10b981;
   text-decoration: none;
