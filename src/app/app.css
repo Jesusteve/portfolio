@@ -176,6 +176,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   
 }
         
@@ -204,24 +205,29 @@
     transform: translate(-6px);
     border-color: rgba(255, 255, 255, 0.4);
   }
-
-.tags-container {
-  display: flex;
-  flex-wrap: wrap; /*  Si las pegatinas no caben en una línea, saltan solas abajo */
-  gap: 0.75rem; /* El hueco exacto entre pegatina y pegatina */
+/* Forzar salto de línea tras el título y espacio */
+.category-tag h3 {
+  display: block;
+  margin: 0 0 0.5rem 0;
+  width: 100%;
 }
 
+/* Contenedor de tags en nueva línea; permite wrap y separación */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+}
 
+/* Pequeño estilo opcional para las etiquetas */
 .skills-tag {
-  display: inline-flex;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.06);
   color: #f1f5f9;
-  padding: 8px 18px;
   border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 
@@ -254,6 +260,59 @@
   margin-top: 6px;
 }
 
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espacio entre la cabecera y el texto de abajo */
+  background-color: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem; /* Reducimos un pelín las esquinas para descripciones largas */
+  border-radius: 24px; /* 50px con mucho texto puede morder las letras; 24px queda genial */
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+  .project:hover {
+
+    transform: translateY(-6px);
+    border-color: #10b981;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), /* Sombra oscura profunda para dar altura */
+    0 0 20px rgba(16, 185, 129, 0.25); /* Brillo de neón difuminado alrededor */
+  }
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* El h3 a la izquierda, el Repositorio a la derecha */
+  width: 100%;
+}
+
+  .project-header h3 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+/* 4. EL ENLACE */
+.project-repo {
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+  .project-repo:hover {
+    text-decoration: underline;
+  }
+
+.project-description {
+  color: #cbd5e1; 
+  font-size: 0.95rem;
+  line-height: 1.6; /* Interlineado cómodo */
+  margin: 0;
+  width: 100%;
+}
 
 .main-footer {
   text-align: center;
