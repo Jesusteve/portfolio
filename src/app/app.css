@@ -226,7 +226,7 @@
   padding: 6px 10px;
   background: rgba(255, 255, 255, 0.06);
   color: #f1f5f9;
-  border-radius: 8px;
+  border-radius: 50px;
   font-size: 0.95rem;
 }
 
@@ -271,6 +271,13 @@
   margin-bottom: 1.5rem;
   text-align: left;
 }
+  .project:hover {
+
+    transform: translateY(-6px);
+    border-color: #10b981;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), /* Sombra oscura profunda para dar altura */
+    0 0 20px rgba(16, 185, 129, 0.25); /* Brillo de neón difuminado alrededor */
+  }
 
 .project-header {
   display: flex;
