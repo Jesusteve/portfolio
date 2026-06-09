@@ -6,6 +6,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth; /* Hace que toda la web navegue con un deslizamiento suave y elegante */
+}
+
 html, body {
   background-color: #11153b; 
   color: #ffff; 
