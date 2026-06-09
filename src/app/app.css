@@ -126,6 +126,10 @@
   object-fit: cover;
 }
 
+  .profile-img:hover{
+      cursor: zoom-in;
+  }
+
 .hero-buttons {
   display: flex;
   gap: 0.5rem;          
@@ -346,5 +350,121 @@
 
   .hero-title {
     font-size: 2.5rem;
+  }
+
+  /* Capa Oscura */
+  .image-modal {
+    position: fixed;
+    z-index: 9999; /* Se asegura de quedar por encima de TODO */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo negro translúcido cinematográfico */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out; /* Si hace clic al fondo, se quita la lupa */
+    animation: fadeIn 0.3s ease;
+  }
+
+  /* La imagen gigante en el centro */
+  .modal-content {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    cursor: default; /* Dentro de la foto el cursor vuelve a ser normal */
+    animation: zoomIn 0.3s ease;
+  }
+
+  /* Botón de la X para cerrar */
+  .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* Animaciones extra */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.9);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+}
+
+/* Estilos para ampliación de imagen (modal) */
+.image-modal {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  padding: 2rem;
+}
+
+.modal-content {
+  max-width: 96%;
+  max-height: 92%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.close-modal {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 2100;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Cursor y pequeño efecto para las miniaturas */
+.project-thumb {
+  cursor: zoom-in;
+  border-radius: 8px;
+  transition: transform 0.15s ease;
+}
+
+.project-thumb:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive: asegurar que la modal se vea bien en móviles */
+@media (max-width: 480px) {
+  .modal-content {
+    max-width: 100%;
+    max-height: 88%;
+  }
+
+  .close-modal {
+    top: 0.6rem;
+    right: 0.6rem;
+    font-size: 1.6rem;
   }
 }

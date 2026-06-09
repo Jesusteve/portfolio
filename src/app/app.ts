@@ -9,4 +9,16 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('portfolio');
+
+  imagenAmpliada: string | null = null;
+
+  // Ampliar la imagen al hacer clic
+  abrirImagen(rutaImg: string) {
+    this.imagenAmpliada = rutaImg;
+  }
+
+  // Volver a la normalidad
+  cerrarImagen() {
+    this.imagenAmpliada = null;
+  }
 }

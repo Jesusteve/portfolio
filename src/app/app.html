@@ -40,7 +40,7 @@
     </div>
 
     <div class="profile-img-container">
-      <img src="/assets/fotoamuclm.jpeg" alt="Foto de Jesús" class="profile-img">
+      <img src="/assets/fotoamuclm.jpeg" alt="Foto de Jesús" class="profile-img" (click)="abrirImagen('assets/fotoamuclm.jpeg')">
     </div>
 
   </section>
@@ -163,7 +163,8 @@
             Realizado en C#, HTML y CSS, en grupo y como parte de una asignatura de la UCLM, centrado en el Back-End de la página web de una ferretería
             donde se permite gestionar compras y alquiler de herramientas y materiales, así como la creación de ofertas durante un tiempo determinado.
           </p>
-          <img src="/assets/AppForSEII.png" alt="AppForSEII" class="profile-img">
+          <img src="/assets/AppForSEII.png" alt="AppForSEII" class="profile-img"
+               (click)="abrirImagen('assets/AppForSEII.png')">
         </div>
         <div class="project">
           <div class="project-header">
@@ -190,7 +191,8 @@
             un servicio de localización o un chatbot propio.
 
           </p>
-          <img src="/assets/ToolBoxGo.png" alt="ToolBox Go" class="profile-img">
+          <img src="/assets/ToolBoxGo.png" alt="ToolBox Go" class="profile-img"
+               (click)="abrirImagen('assets/ToolBoxGo.png')">
         </div>
       </div>
     </div>
@@ -210,6 +212,16 @@
 
 </main>
 
+
 <footer class="main-footer">
   <p>© 2026 Jesús Tercero Vergara. Desarrollado con Angular, TypeScript y CSS.</p>
 </footer>
+
+<!-- Función para disminuir la foto -->
+@if (imagenAmpliada){
+<div class="image-modal" (click)="cerrarImagen()">
+  <span class="close-modal">&times;</span>
+
+  <img [src]="imagenAmpliada" class="modal-content" (click)="$event.stopPropagation()">
+</div>
+}
