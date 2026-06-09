@@ -471,3 +471,43 @@
     font-size: 1.6rem;
   }
 }
+.project.scroll-fix {
+  transform: none !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: none !important;
+  background-color: rgba(59, 130, 246, 0.05) !important;
+}
+
+/* Añade al final de app.css */
+
+/* Clase que se aplica cuando el scroll/parada ocurrió y el puntero está fuera.
+   Desactiva efectos hover y pausa animaciones en elementos seleccionados. */
+
+/* Evitar cambios visuales bruscos en modal/elementos críticos */
+.scroll-fix .image-modal,
+.scroll-fix .modal-content {
+  animation-play-state: running !important;
+  transition: none !important;
+  pointer-events: auto;
+}
+
+/* Desactivar hover/transformaciones en tarjetas de proyecto mientras la fix está activa */
+.scroll-fix .project,
+.scroll-fix .project * {
+  animation-play-state: paused !important;   /* pausa animaciones CSS */
+  transition-property: none !important;      /* evita transiciones al reaparecer */
+}
+
+/* Específico: impedir los estilos :hover de las tarjetas */
+.scroll-fix .project:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Mantener botones e inputs usables si hace falta (no deshabilitamos todo) */
+.scroll-fix a, .scroll-fix button, .scroll-fix input {
+  pointer-events: auto;
+}
+
+/* Si en algún sitio tenías reglas globales que ya usaban disable-hover, coméntalas.
+   Si quieres cambiar la duración del bloqueo, ajusta los timeouts en TypeScript. */
