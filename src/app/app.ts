@@ -68,11 +68,11 @@ export class App {
         this.removeFixTimeout = setTimeout(() => {
           document.documentElement.classList.remove('scroll-fix');
           this.removeFixTimeout = null;
-        }, 220); // 200-300ms suele ser suficiente
+        }, 220); 
       } else {
         // Si el cursor está dentro, asegúrate de no aplicar ningún fix
         document.documentElement.classList.remove('scroll-fix');
       }
-    }, 120); // ajustable: tiempo tras el que consideramos "se ha parado"
+    }, 100); 
   }
 }
